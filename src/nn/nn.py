@@ -94,10 +94,9 @@ def AffineBackward(grad_y, x, w):
 
     # Insert your code here.
     grad_x = grad_y.dot(w.T)
-    #grad_w_b = (x.T).dot(grad_y) # check dimensions 
-    #grad_w = grad_w_b[0:grad_w_b.shape[0]-1]
+    
     grad_w = (x.T).dot(grad_y)
-    #grad_b = grad_w_b[grad_w_b.shape[0]-1]
+    
     grad_b = np.sum(grad_y, axis=0)
     
     return grad_x, grad_w, grad_b
@@ -126,7 +125,6 @@ def ReLUBackward(grad_y, x, y): #not sure if ReLU is correct
     ###########################
     # Insert your code here.
     grad_ReLU = (x > 0).astype(float) 
-    #grad_x = np.multiply((grad_y),(np.multiply(x,grad_ReLU))) # don't think we multiply twice
     grad_x = np.multiply(grad_y,grad_ReLU)    
     return grad_x
     ###########################
