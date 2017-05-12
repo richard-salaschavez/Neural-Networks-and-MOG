@@ -89,9 +89,7 @@ def AffineBackward(grad_y, x, w):
         grad_b: Gradients wrt. the biases.
     """
     ###########################
-    #ones = np.zeros((x.shape[0],1))+1 
-    #x = np.hstack((x,ones)) # N x (M+1)
-
+    
     # Insert your code here.
     grad_x = grad_y.dot(w.T)
     
