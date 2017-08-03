@@ -35,9 +35,8 @@ def mogEM(x, K, iters, randConst=1, minVary=0):
     # Question 4.3: change the initializaiton with Kmeans here
     #--------------------  Add your code here --------------------
     #mu = mn + np.random.randn(N, K) * (np.sqrt(vr) / randConst)
-
     #------------------- Answers ---------------------
-    # to be removed before release
+    
     #K = 7
     iter_kmeans = 5
     mu = KMeans(x, K, iter_kmeans)
